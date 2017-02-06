@@ -52,12 +52,13 @@ namespace Repetition_Inheritance
             return 1000;
         }
 
-        public Bil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter)
+        public Bil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr)
         {
             this.Mærke = Mærke;
             this.BilPrisExAfgift = PrisExAfgift;
             this.KøbsÅr = KøbsÅr;
             this.KmPrLiter = KmPrLiter;
+            this.RegistreringsNr = RegistreringsNr;
         }
 
     }
