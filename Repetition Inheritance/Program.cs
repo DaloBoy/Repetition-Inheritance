@@ -16,7 +16,7 @@ namespace Repetition_Inheritance
             BilListe.Add(new DieselBil("BMW", 4000, 2017, 34, "147369"));
             BilListe.Add(new DieselBil("BMW", 4500, 2009, 34, "321654"));
             BilListe.Add(new DieselBil("BMW", 3750, 2010, 34, "753421", false));
-
+            
             foreach (DieselBil db in BilListe)
             {
                 Console.WriteLine("RegistreringsNr: " + db.RegistreringsNr + "      Den halvårlige ejerafgift er: " + db.HalvÅrligEjerAfgift());
