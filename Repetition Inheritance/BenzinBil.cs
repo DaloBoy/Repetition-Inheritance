@@ -8,9 +8,12 @@ namespace Repetition_Inheritance
 {
     sealed class BenzinBil : Bil
     {
-        public BenzinBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr) : base(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
+        public BenzinBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank) : base(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
         {
+            this.Tank = Tank;
         }
+
+        public int Tank { get; set; }
 
         public override int HalvÅrligEjerAfgift()
         {
@@ -31,7 +34,10 @@ namespace Repetition_Inheritance
             return ejerafgift;
         }
 
-
-
+        public override int Rækkevidde()
+        {        
+            int længde = Tank*KmPrLiter;
+            return længde;
+        }
     }
 }

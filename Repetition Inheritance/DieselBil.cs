@@ -8,17 +8,20 @@ namespace Repetition_Inheritance
 {
     public class DieselBil : Bil
     {
-        public DieselBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, bool PartikelFilter) 
+        public DieselBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank, bool PartikelFilter) 
             : base(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
         {
+            this.PartikelFilter = PartikelFilter;
+            this.Tank = Tank;
 
         }
-        public DieselBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr)
-            : this(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr, PartikelFilter: true)
+        public DieselBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank)
+            : this(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr, Tank, PartikelFilter: true)
         {
-            PartikelFilter = true;
+            
         }
 
+        public int Tank { get; set; }
         public bool PartikelFilter { get; set; }
 
         public override int HalvÅrligEjerAfgift()
@@ -44,6 +47,13 @@ namespace Repetition_Inheritance
             }
             return ejerafgift;
 
+        }
+
+        public override int Rækkevidde()
+        {
+  
+            int længde = Tank * KmPrLiter;
+            return længde;
         }
     }
 }
