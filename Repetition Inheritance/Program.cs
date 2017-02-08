@@ -50,7 +50,7 @@ namespace Repetition_Inheritance
             //    Console.WriteLine("Mærke: " + eb.Mærke + "    Halvårlige ejerafgift: " + eb.HalvÅrligEjerAfgift() + "    Købs År " + eb.KøbsÅr + "    Km/l: " + eb.KmPrKW + "   Batteri-Kapaciteten: " + eb.BatteriKapacitet + "    Reg. Nr: " + eb.RegistreringsNr + "    Bilen har en rækkevidde på: " + eb.Rækkevidde());
             //}
 
-            List<Bil> BilListe = new List<Bil>();
+            List<IBil> BilListe = new List<IBil>();
             BilListe.Add(new DieselBil("Ford", 5000, 2004, 23, "852456", 20));
             BilListe.Add(new DieselBil("BMW", 3400, 2016, 20, "852789", 20, false));
             BilListe.Add(new DieselBil("BMW", 4000, 2017, 13, "147369", 40));

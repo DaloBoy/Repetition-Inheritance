@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Repetition_Inheritance
 {
-    public abstract class Bil
+    
+
+    public abstract class Bil : IBil
     {
         private double prisExAfgift;
 
