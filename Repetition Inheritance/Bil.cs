@@ -8,11 +8,13 @@ namespace Repetition_Inheritance
 {
     public abstract class Bil
     {
+        private double prisExAfgift;
+
         public double BilPrisExAfgift { get; private set; }
         public int KøbsÅr { get; private set; }
         public string Mærke { get; set; }
         public string RegistreringsNr { get; set; }
-        public int KmPrLiter  { get; set; }
+        
 
         public virtual double RegistreringsAfgift()
         {
@@ -50,14 +52,14 @@ namespace Repetition_Inheritance
         public abstract int HalvÅrligEjerAfgift();
         public abstract int Rækkevidde();
 
-        public Bil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr)
+        public Bil(string Mærke, double PrisExAfgift, int KøbsÅr, string RegistreringsNr)
         {
             this.Mærke = Mærke;
             this.BilPrisExAfgift = PrisExAfgift;
             this.KøbsÅr = KøbsÅr;
-            this.KmPrLiter = KmPrLiter;
             this.RegistreringsNr = RegistreringsNr;
         }
 
+        
     }
 }

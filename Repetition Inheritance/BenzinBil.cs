@@ -8,12 +8,14 @@ namespace Repetition_Inheritance
 {
     sealed class BenzinBil : Bil
     {
-        public BenzinBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank) : base(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
+        public BenzinBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank) : base(Mærke, PrisExAfgift, KøbsÅr, RegistreringsNr)
         {
             this.Tank = Tank;
+            this.KmPrLiter = KmPrLiter;
         }
 
         public int Tank { get; set; }
+        public int KmPrLiter { get; set; }
 
         public override int HalvÅrligEjerAfgift()
         {

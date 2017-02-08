@@ -9,10 +9,11 @@ namespace Repetition_Inheritance
     public class DieselBil : Bil
     {
         public DieselBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank, bool PartikelFilter) 
-            : base(Mærke, PrisExAfgift, KøbsÅr, KmPrLiter, RegistreringsNr)
+            : base(Mærke, PrisExAfgift, KøbsÅr, RegistreringsNr)
         {
             this.PartikelFilter = PartikelFilter;
             this.Tank = Tank;
+            this.KmPrLiter = KmPrLiter;
 
         }
         public DieselBil(string Mærke, double PrisExAfgift, int KøbsÅr, int KmPrLiter, string RegistreringsNr, int Tank)
@@ -23,6 +24,7 @@ namespace Repetition_Inheritance
 
         public int Tank { get; set; }
         public bool PartikelFilter { get; set; }
+        public int KmPrLiter { get; set; }
 
         public override int HalvÅrligEjerAfgift()
         {
