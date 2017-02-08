@@ -78,7 +78,10 @@ namespace Repetition_Inheritance
 
                     ElBil ebil = bil as ElBil; ;
                     Console.WriteLine("El bil Reg. nr. " + ebil.RegistreringsNr + ": ER mærke: " + ebil.Mærke + " Og koster: " + ebil.BilPrisExAfgift + " og er fra " + ebil.KøbsÅr + " og kører " + ebil.KmPrKW + " km/KW og koster i afgift " + ebil.HalvÅrligEjerAfgift() + " Bilen har " + ebil.BatteriKapacitet + "KW og kan køre " + ebil.Rækkevidde() + " pr Batteri");
-                    
+                    if (bil is IMotor)
+                    {
+                        Console.WriteLine(" Har Elmotor " + " Oplade tid = " + ebil.LadeTid());
+                    }
 
                 }
                 if (bil is DieselBil)
